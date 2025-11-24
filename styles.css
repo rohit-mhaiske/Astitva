@@ -1,0 +1,361 @@
+:root {
+  --bg: #f7f7f8;
+  --primary: #0b3d91;
+  --accent: #ff6b35;
+  --muted: #6b7280;
+  --card: #ffffff;
+  --max-width: 1100px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', 'Segoe UI', sans-serif;
+  background-color: var(--bg);
+  color: #111827;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* Header Styles */
+header.site-header {
+  background: #fff;
+  border-bottom: 1px solid #e6e6e6;
+  position: sticky;
+  top: 0;
+  z-index: 40;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand h1 {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  font-size: 1.1rem;
+  color: var(--primary);
+}
+
+nav.main-nav {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+nav.main-nav a {
+  color: #111827;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  background: #f1f5f9;
+  padding: 6px;
+  border-radius: 8px;
+}
+
+.search input {
+  border: 0;
+  background: transparent;
+  padding: 6px 8px;
+  outline: none;
+  width: 160px;
+}
+
+.icon-btn {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.cart-badge {
+  background: var(--accent);
+  color: #fff;
+  border-radius: 999px;
+  padding: 4px 8px;
+  font-weight: 700;
+  margin-left: 6px;
+}
+
+.mobile-toggle {
+  display: none;
+}
+
+.mobile-menu-panel {
+  display: none;
+  padding: 10px 16px;
+  border-top: 1px solid #eee;
+}
+
+/* Hero Section */
+.hero {
+  background-image: linear-gradient(rgba(3, 7, 18, 0.45), rgba(3, 7, 18, 0.35)), url('https://via.placeholder.com/1400x500?text=Astitva+Menswear');
+  background-size: cover;
+  background-position: center;
+  height: 420px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.hero .hero-inner {
+  padding: 48px 16px;
+}
+
+.hero h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  margin: 0;
+  margin-bottom: 12px;
+}
+
+.hero p {
+  margin: 0 0 18px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Buttons */
+.btn {
+  background: var(--accent);
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: 0;
+  cursor: pointer;
+  font-weight: 700;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #e55a2b;
+}
+
+/* Sections */
+.section {
+  padding: 40px 0;
+}
+
+.section h2 {
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 18px;
+  color: #0f172a;
+}
+
+/* Products Grid */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.product {
+  background: var(--card);
+  padding: 14px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.12);
+}
+
+.product img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.product h3 {
+  margin: 12px 0 6px;
+  font-size: 1.05rem;
+}
+
+.product .price {
+  color: var(--primary);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.product .meta {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-bottom: 12px;
+}
+
+.product .controls {
+  margin-top: auto;
+  display: flex;
+  gap: 8px;
+}
+
+.product .controls .btn {
+  flex: 1;
+}
+
+/* About Section */
+.about p {
+  max-width: 850px;
+  margin: 0 auto;
+  color: var(--muted);
+}
+
+/* Footer */
+footer {
+  background: #0b1220;
+  color: #fff;
+  padding: 28px 0;
+  margin-top: 28px;
+}
+
+footer .foot-inner {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+footer a {
+  color: #d1d5db;
+  text-decoration: none;
+}
+
+footer input,
+footer textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  border: 0;
+}
+
+/* Media Queries */
+@media (max-width: 900px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero h2 {
+    font-size: 1.6rem;
+  }
+
+  .search input {
+    width: 110px;
+  }
+}
+
+@media (max-width: 640px) {
+  nav.main-nav {
+    display: none;
+  }
+
+  .mobile-toggle {
+    display: block;
+  }
+
+  .search input {
+    width: 80px;
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    height: 300px;
+  }
+
+  .hero h2 {
+    font-size: 1.3rem;
+  }
+}
+
+/* Global link styles (H&M-like) */
+a {
+  color: #111827;
+  text-decoration: none;
+  position: relative;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  text-transform: none;
+  transition: color 180ms ease;
+}
+
+/* animated underline */
+a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  height: 2px;
+  width: 0%;
+  background: var(--accent, #ff6b35);
+  transition: width 220ms cubic-bezier(.2,.9,.3,1);
+}
+
+a:hover,
+a:focus {
+  color: var(--accent);
+  outline: none;
+}
+
+a:hover::after,
+a:focus::after {
+  width: 100%;
+}
+
+/* Nav links should look more like H&M: uppercase and spaced */
+nav.main-nav a {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+/* Footer links slightly muted, keep underline animation */
+footer a {
+  color: rgba(255, 255, 255, 0.85);
+  text-transform: none;
+  letter-spacing: 0.2px;
+}
+
+/* Accessible focus ring */
+a:focus-visible {
+  box-shadow: 0 0 0 3px rgba(11, 61, 145, 0.12);
+  border-radius: 2px;
+}
+
+/* Helper class to opt-out of uppercase behavior when needed */
+.link-normal-case {
+  text-transform: none !important;
+}

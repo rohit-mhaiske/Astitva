@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Us - Astitva Clothing</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #fff;
+      color: #222;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 600px;
+      margin: 60px auto;
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      padding: 40px 30px 30px 30px;
+    }
+    h1 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 8px;
+      letter-spacing: -1px;
+    }
+    p.subtitle {
+      text-align: center;
+      color: #888;
+      margin-bottom: 32px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    label {
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    input, textarea {
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-family: inherit;
+      resize: vertical;
+    }
+    textarea {
+      min-height: 100px;
+      max-height: 300px;
+    }
+    button {
+      background: #d60000;
+      color: #fff;
+      border: none;
+      padding: 14px 0;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+      margin-top: 10px;
+    }
+    button:hover {
+      background: #b30000;
+    }
+    .info {
+      margin-top: 32px;
+      text-align: center;
+      color: #555;
+      font-size: 0.98rem;
+    }
+    @media (max-width: 700px) {
+      .container {
+        margin: 24px 8px;
+        padding: 24px 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Contact Us</h1>
+    <p class="subtitle">We'd love to hear from you! Fill out the form below and our team will get back to you soon.</p>
+    <form>
+      <div>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required></textarea>
+      </div>
+      <button type="submit">Send Message</button>
+    </form>
+    <div class="info">
+      Or email us at <a href="mailto:support@astitvaclothing.com">support@astitvaclothing.com</a><br>
+      Call: <a href="tel:+911234567890">+91 12345 67890</a>
+    </div>
+  </div>
+</body>
+</html>
